@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
-      <Navbar/>
+    <Navbar/>
+    <div className='w-full h-screen'></div>
     
+
     </>
 
   )

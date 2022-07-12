@@ -1,19 +1,34 @@
 import React from 'react'
 
+
+
 const Navbar = () => {
+
+  let Links = [
+    {name:"HOME",link:"/"},
+    {name:"SHOP",link:"/"},
+    {name:"SUCURSALES",link:"/"}
+  ]
   return (
     <>
-    <div className='bg-teal-700 w-screen py-4 font-bold text-xl text-white flex justify-between'>
-        <p className='font-mono ml-5'>dev.shop</p>
-        <nav className='font-mono inline-block'>
-            <ul className='mr-5'>
-                <li>Shop</li>
-                <li>test</li>
-            </ul>
-        </nav>
-        
+    <div className='shadow-md w-full fixed top-0 left-0'>
+      <div className='md:flex items-center justify-between bg-teal-700 py-4 md:px-10 px-7'>
+        <div className='font-bold text-2xl cursor-pointer flex items-center font-roboto text-white'>
+          <span className='animate-spin-slow text-3xl text-white mr-1 pt-2'>
+          <ion-icon name="logo-react"></ion-icon>
+          </span>
+           devShop
+        </div>
+        <ul className='md:flex md:items-center'>
+          {Links.map((link)=> (
+            <li key={link.name} className="md:ml-8 text-xl">
+              <a href={link.link} className="text-white hover:text-gray-400 duration-500"> {link.name} </a>
+            </li>
+          ))}
+          
+        </ul>
+      </div>
     </div>
-
        
     
     </>
