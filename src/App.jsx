@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import ItemListContainer from './components/ItemListContainer'
+import Articulos from './components/Articulos'
 
 function App() {
   
 
   return (
     <>
-    <Navbar/>
-    <div className='w-full h-screen'></div>
+    
+      <Navbar />
+      
+    
+      <ItemListContainer />
+      <Articulos />
     
 
     </>

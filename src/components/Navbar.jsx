@@ -1,4 +1,6 @@
 import React from 'react'
+import ShoppingCart from './ShoppingCart'
+
 
 
 
@@ -10,9 +12,9 @@ const Navbar = () => {
     {name:"SUCURSALES",link:"/"}
   ]
   return (
-    <>
+    <div>
     <div className='shadow-md w-full fixed top-0 left-0'>
-      <div className='md:flex items-center justify-between bg-teal-700 py-4 md:px-10 px-7'>
+      <div className='md:flex items-center justify-between bg-teal-700 py-4 md:px-10 px-7 '>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-roboto text-white'>
           <span className='animate-spin-slow text-3xl text-white mr-1 pt-2'>
           <ion-icon name="logo-react"></ion-icon>
@@ -25,13 +27,13 @@ const Navbar = () => {
               <a href={link.link} className="text-white hover:text-gray-400 duration-500"> {link.name} </a>
             </li>
           ))}
-          
+          <ShoppingCart></ShoppingCart>
         </ul>
       </div>
     </div>
        
     
-    </>
+    </div>
   )
 }
 
