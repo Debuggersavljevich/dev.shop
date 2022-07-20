@@ -16,7 +16,7 @@ const ShoppingCart = () => {
     return (
         
             <button onClick={()=>cartAlert()}> 
-                <span className='text-white font-bold m-4'>
+                <span className='text-white font-bold m-4' >
                 <ion-icon name="cart">
                     
                 </ion-icon>

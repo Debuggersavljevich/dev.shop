@@ -7,7 +7,8 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
       },
       fontFamily: {
-        roboto: "'Roboto Mono', serif"
+        roboto: "'Roboto Mono', serif",
+        inter:"'Inter', sans-serif"
       }
     },
   },

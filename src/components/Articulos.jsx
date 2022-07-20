@@ -14,12 +14,14 @@ const Articulos = () => {
     }
 
   return (
-         <div className='text-center relative bottom-52 font-roboto font-bold'>
-             <h2>Nuestros productos más destacados</h2>
-            <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="headset"></ion-icon></button>
-            <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="camera"></ion-icon></button>
-            <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="game-controller"></ion-icon></button>
-            <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="laptop"></ion-icon></button>
+         <div className='text-center bg-teal-600 m-10 rounded-full border-4 shadow-xl border-teal-900 p-1 relative bottom-52 font-inter font-bold '>
+           
+                <h2>Nuestros productos más destacados</h2>
+                    <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="headset"></ion-icon></button>
+                    <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="camera"></ion-icon></button>
+                    <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="game-controller"></ion-icon></button>
+                    <button onClick={()=>articleAlert()} className='ml-5 w-12 h-12 mt-5 bg-indigo-200 rounded-xl'><ion-icon size="large" name="laptop"></ion-icon></button>
+            
         </div>
   )
 }
