@@ -1,10 +1,13 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 import Item from './Item'
-import Articulos from './Articulos'
+import Articulos from './Articulos' 
+import ItemList from './ItemList'
 
 
 const ItemListContainer = () => {
 
+    const [listaProductos, setListaProductos] = useState([])
     const shopAlert = () => {
         swal({
             title: "Lo sentimos :(",
@@ -15,6 +18,65 @@ const ItemListContainer = () => {
         })
     }  
 
+    function generateID() {
+        const generarID = () => {
+          const num = Math.random().toString(36).substring(2)
+          const date = Date.now().toString(36)
+          return num + date
+        }}
+       
+       let products = [{
+        name: 'Mouse Vertical',
+        brand: 'Logitech',
+        info: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor...',
+        price: 120.00,
+        id: generateID()},
+        {
+            name: 'Mouse Vertical',
+            brand: 'Logitech',
+            info: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor...',
+            price: 120.00,
+            id: generateID()
+          
+          },
+          {
+            name: 'Mouse Vertical',
+            brand: 'Logitech',
+            info: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor...',
+            price: 120.00,
+            id: generateID()
+          
+          },
+          {
+            name: 'Mouse Vertical',
+            brand: 'Logitech',
+            info: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor...',
+            price: 120.00,
+            id: generateID()
+          
+          }]
+       
+    
+      const data = new Promise ((resolve, reject) => {
+        let condition = true
+        setTimeout(() => {
+          if(condition){
+            resolve(products)
+          } else(
+            reject('No se ha podido')
+          )
+        }
+    
+        )
+      }, 3000)
+       
+      
+      useEffect(() => {
+        data
+        .then((res) => setListaProductos(res))
+        .catch((error) => console.log(error))
+      }, []);
+       
 
   return (
     <>  
@@ -34,11 +96,8 @@ const ItemListContainer = () => {
             <Articulos />
         </div>
 
-        <div className='flex justify-around text-center '>
-            <Item /> 
-            <Item /> 
-            <Item /> 
-            <Item /> 
+        <div className='flex justify-around text-center'>
+            <ItemList listaProductos = {listaProductos}/>
         </div> 
         
         

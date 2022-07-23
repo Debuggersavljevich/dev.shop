@@ -1,17 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import swal from 'sweetalert'
+import ItemListContainer from './ItemListContainer';
 
 
-
-const Item = () => {
-
-
-
-   
-   
+const Item = ({producto}) => {
     
-    
-    
+
     const [count, setCount] = useState(3);
    
     
@@ -42,12 +36,12 @@ const Item = () => {
     <img class="w-full h-52 p-5 rounded-sm object-cover" src="./src\images\mouse-vertical.png" alt="Hotel Room" />
     <div class="py-7 px-6">
     <div class="flex justify-between items-end">
-      <span>Mouse Vertical <br /> Logitech</span>
+      <span>{producto.name}<br /> {producto.brand}</span>
       <button  class="text-blue-500 capitalize border border-gray-300 rounded-md py-1 px-3 hover:bg-indigo-200 transition-all" > <ion-icon name="cart"></ion-icon>{count}</button>
     </div>
-      <h1 class="text-2xl font-bold text-gray-800">$120.00</h1>
+      <h1 class="text-2xl font-bold text-gray-800">{producto.price}</h1>
       <hr class="mt-3 mb-5" /> 
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor...</p>
+        <p>{producto.info}</p>
       
       <span class="text-gray-400 text-sm mt-2.5 mb-6 block"><span></span></span>
       <div>
